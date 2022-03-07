@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "modvski:wuantanio_ingot"
+    }
+  },
+  "result": {
+    "item": "modvski:wuantanio_pickaxe",
+    "count": 1
+  }
+}

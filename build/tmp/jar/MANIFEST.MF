@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: ModVski
+Implementation-Version: 1.16.5-1.0.0
+Specification-Vendor: modvski
+Specification-Title: modvski
+Implementation-Timestamp: 2021-05-15T18:48:42+0100
+Specification-Version: 1
+Implementation-Vendor: examplemods
+

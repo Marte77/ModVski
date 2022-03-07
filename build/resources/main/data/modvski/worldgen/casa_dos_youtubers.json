@@ -1,0 +1,17 @@
+{
+  "name": "modvski:casa_dos_youtubers",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location":"modvski:casa_dos_youtubers",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+
+
+}

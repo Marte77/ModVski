@@ -1,0 +1,149 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 15-05-2021 17:22
+Description: Exception initializing level
+
+java.lang.ExceptionInInitializerError: null
+	at com.martinhomods.modvski.modvski.lambda$biomeModification$1(modvski.java:101) ~[?:?] {re:classloading}
+	at net.minecraft.world.biome.BiomeGenerationSettings.lambda$isValidStart$7(BiomeGenerationSettings.java:76) ~[forge:?] {re:classloading}
+	at java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[?:1.8.0_292] {}
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958) ~[?:1.8.0_292] {}
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126) ~[?:1.8.0_292] {}
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499) ~[?:1.8.0_292] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486) ~[?:1.8.0_292] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[?:1.8.0_292] {}
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[?:1.8.0_292] {}
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[?:1.8.0_292] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_292] {}
+	at java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:516) ~[?:1.8.0_292] {}
+	at net.minecraft.world.biome.BiomeGenerationSettings.isValidStart(BiomeGenerationSettings.java:75) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.generateStrongholds(ChunkGenerator.java:74) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.hasStronghold(ChunkGenerator.java:304) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.feature.structure.StrongholdStructure.isFeatureChunk(StrongholdStructure.java:25) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.feature.structure.StrongholdStructure.isFeatureChunk(StrongholdStructure.java:15) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.feature.structure.Structure.generate(Structure.java:222) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.gen.feature.StructureFeature.generate(StructureFeature.java:34) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.createStructure(ChunkGenerator.java:241) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.createStructures(ChunkGenerator.java:228) ~[forge:?] {re:classloading}
+	at net.minecraft.world.chunk.ChunkStatus.lambda$static$2(ChunkStatus.java:41) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.chunk.ChunkStatus.generate(ChunkStatus.java:198) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ChunkManager.lambda$null$18(ChunkManager.java:524) ~[forge:?] {re:classloading}
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-4.0.26.jar:?] {re:classloading,re:classloading}
+	at net.minecraft.world.server.ChunkManager.lambda$scheduleChunkGeneration$20(ChunkManager.java:522) ~[forge:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture.uniCompose(CompletableFuture.java:966) ~[?:1.8.0_292] {}
+	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:940) ~[?:1.8.0_292] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_292] {}
+	at net.minecraft.world.chunk.ChunkTaskPriorityQueueSorter.lambda$null$1(ChunkTaskPriorityQueueSorter.java:44) ~[forge:?] {re:classloading}
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.pollTask(DelegatedTaskExecutor.java:88) ~[forge:?] {re:classloading}
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.pollUntil(DelegatedTaskExecutor.java:132) ~[forge:?] {re:classloading}
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.run(DelegatedTaskExecutor.java:100) ~[forge:?] {re:classloading}
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402) ~[?:1.8.0_292] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) ~[?:1.8.0_292] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) ~[?:1.8.0_292] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) ~[?:1.8.0_292] {}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175) ~[?:1.8.0_292] {}
+Caused by: java.lang.NullPointerException: Registry Object not present: modvski:casa_dos_youtubers
+	at java.util.Objects.requireNonNull(Objects.java:290) ~[?:1.8.0_292] {}
+	at net.minecraftforge.fml.RegistryObject.get(RegistryObject.java:120) ~[forge:?] {re:classloading}
+	at com.martinhomods.modvski.world.structures.StructuresConfigured.<clinit>(StructuresConfigured.java:16) ~[?:?] {re:classloading}
+	... 38 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.martinhomods.modvski.modvski.lambda$biomeModification$1(modvski.java:101) ~[?:?] {re:classloading}
+	at net.minecraft.world.biome.BiomeGenerationSettings.lambda$isValidStart$7(BiomeGenerationSettings.java:76) ~[forge:?] {re:classloading}
+	at java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[?:1.8.0_292] {}
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958) ~[?:1.8.0_292] {}
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126) ~[?:1.8.0_292] {}
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499) ~[?:1.8.0_292] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486) ~[?:1.8.0_292] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[?:1.8.0_292] {}
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[?:1.8.0_292] {}
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[?:1.8.0_292] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_292] {}
+	at java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:516) ~[?:1.8.0_292] {}
+	at net.minecraft.world.biome.BiomeGenerationSettings.isValidStart(BiomeGenerationSettings.java:75) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.generateStrongholds(ChunkGenerator.java:74) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.hasStronghold(ChunkGenerator.java:304) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.feature.structure.StrongholdStructure.isFeatureChunk(StrongholdStructure.java:25) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.feature.structure.StrongholdStructure.isFeatureChunk(StrongholdStructure.java:15) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.feature.structure.Structure.generate(Structure.java:222) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.gen.feature.StructureFeature.generate(StructureFeature.java:34) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.createStructure(ChunkGenerator.java:241) ~[forge:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.createStructures(ChunkGenerator.java:228) ~[forge:?] {re:classloading}
+	at net.minecraft.world.chunk.ChunkStatus.lambda$static$2(ChunkStatus.java:41) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.chunk.ChunkStatus.generate(ChunkStatus.java:198) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ChunkManager.lambda$null$18(ChunkManager.java:524) ~[forge:?] {re:classloading}
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-4.0.26.jar:?] {re:classloading,re:classloading,re:classloading}
+	at net.minecraft.world.server.ChunkManager.lambda$scheduleChunkGeneration$20(ChunkManager.java:522) ~[forge:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture.uniCompose(CompletableFuture.java:966) ~[?:1.8.0_292] {}
+	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:940) ~[?:1.8.0_292] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_292] {}
+	at net.minecraft.world.chunk.ChunkTaskPriorityQueueSorter.lambda$null$1(ChunkTaskPriorityQueueSorter.java:44) ~[forge:?] {re:classloading}
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.pollTask(DelegatedTaskExecutor.java:88) ~[forge:?] {re:classloading}
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.pollUntil(DelegatedTaskExecutor.java:132) ~[forge:?] {re:classloading}
+-- Affected level --
+Details:
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 529
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (40,64,-184), Chunk: (at 8,4,8 in 2,-12; contains blocks 32,0,-192 to 47,255,-177), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 0 game time, 0 day time
+	Level name: teste casa
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.createLevels(MinecraftServer.java:353) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.loadLevel(MinecraftServer.java:308) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.initServer(IntegratedServer.java:60) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:621) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:232) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_292] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_292, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 859612088 bytes (819 MB) / 1717043200 bytes (1637 MB) up to 3782737920 bytes (3607 MB)
+	CPUs: 12
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 8.0.9+86+master.3cf110c
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.1.0_mapped_official_1.16.5-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.1.0_mapped_official_1.16.5-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.1.0_mapped_official_1.16.5-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.1.0_mapped_official_1.16.5-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.1.0_mapped_official_1.16.5-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.1
+	Forge: net.minecraftforge:36.1.0
+	FML Language Providers: 
+		javafml@36.1
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.5              |DONE      |a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |Mod do vski                   |modvski                       |NONE                |DONE      |NOSIGNATURE
+		forge-1.16.5-36.1.0_mapped_official_1.16.5-recomp.|Forge                         |forge                         |36.1.0              |DONE      |NOSIGNATURE
+	Crash Report UUID: 34b3eb90-bc8b-406d-8cf0-4be3bc3bf861
+	Player Count: 0 / 8; []
+	Data Packs: vanilla, mod:modvski, mod:forge
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'
