@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "modvski:wuantanio_ore"
-  },
-  "result": "modvski:wuantanio_ingot",
-  "experience": 1.0,
-  "cookingtime": 100
-}

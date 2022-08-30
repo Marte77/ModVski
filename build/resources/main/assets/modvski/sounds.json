@@ -1,7 +1,0 @@
-{
-  "wuantanio_ore_break": {
-    "category" : "block",
-    "subtitle" : "subtitle.wuantanio_ore_break",
-    "sounds": ["modvski:wuantanio_ore_break"]
-  }
-}
