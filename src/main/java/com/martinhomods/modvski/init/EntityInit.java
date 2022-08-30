@@ -22,7 +22,7 @@ public class EntityInit {
     //é o que informa o FML sobre os meus blocos
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, modvski.MODID);
 
-    public static final RegistryObject<EntityType<lamborghini_entity>> LAMBORGHINI_ENTITY = ENTITIES.register("lamborghini_entity",() ->
+    public static final RegistryObject<EntityType<Entity>> LAMBORGHINI_ENTITY = ENTITIES.register("lamborghini_entity",() ->
                     EntityType.Builder.of(
                             lamborghini_entity::new,
                             EntityClassification.MISC

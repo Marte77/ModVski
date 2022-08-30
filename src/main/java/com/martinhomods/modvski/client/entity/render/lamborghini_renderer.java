@@ -10,13 +10,14 @@ import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Quaternion;
 import net.minecraft.util.math.vector.Vector3f;
 
 
-public class lamborghini_renderer extends EntityRenderer<lamborghini_entity> {
+public class lamborghini_renderer extends EntityRenderer<Entity> {
     protected final lamborghini_model model = new lamborghini_model();
     protected static final ResourceLocation TEXTURE = new ResourceLocation(modvski.MODID,"textures/entity/lamborghini_entity/carro.png");
     public static final float SHADOW_SIZE = .6f;
@@ -28,7 +29,7 @@ public class lamborghini_renderer extends EntityRenderer<lamborghini_entity> {
 
 
     @Override
-    public void render(lamborghini_entity lamborghini_entity, float p_225623_2_, float p_225623_3_, MatrixStack p_225623_4_, IRenderTypeBuffer p_225623_5_, int p_225623_6_) {
+    public void render(Entity lamborghini_entity, float p_225623_2_, float p_225623_3_, MatrixStack p_225623_4_, IRenderTypeBuffer p_225623_5_, int p_225623_6_) {
         /*p_225623_4_.pushPose();
         p_225623_4_.translate(0.0D, 0.375D, 0.0D);
         p_225623_4_.mulPose(Vector3f.YP.rotationDegrees(180.0F - p_225623_2_));
@@ -50,7 +51,7 @@ public class lamborghini_renderer extends EntityRenderer<lamborghini_entity> {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(lamborghini_entity p_110775_1_) {
+    public ResourceLocation getTextureLocation(Entity p_110775_1_) {
         return TEXTURE;
     }
 }

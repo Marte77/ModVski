@@ -6,6 +6,7 @@ import com.martinhomods.modvski.world.gen.OreGeneration;
 import com.martinhomods.modvski.world.structures.StructuresConfigured;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.Block;
+import net.minecraft.block.DispenserBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
