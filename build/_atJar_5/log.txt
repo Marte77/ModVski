@@ -1,5 +1,7 @@
-Args: "--inJar", "D:\Programacao\Programas\ModVski\build\fg_cache\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-injected.jar", "--outJar", "D:\Programacao\Programas\ModVski\build\fg_cache\net\minecraftforge\forge\1.16.5-36.1.0_mapped_official_1.16.5\forge-1.16.5-36.1.0_mapped_official_1.16.5.jar", "--logFile", "accesstransform.log", "--atFile", "D:\Programacao\Programas\ModVski\src\main\resources\META-INF\accesstransformer.cfg", "--atFile", "D:\Programacao\Programas\ModVski\build\_atJar_5\parent_at.cfg"
-Classpath: C:\Users\marti\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\accesstransformers\1.0.5\accesstransformers-1.0.5-fatjar.jar
-WorkDir: D:\Programacao\Programas\ModVski\build\_atJar_5
-Main: net.minecraftforge.accesstransformer.TransformerProcessor
+Java Launcher: /Users/marte/Library/Java/JavaVirtualMachines/corretto-1.8.0_342/Contents/Home/bin/java
+Arguments: '--inJar, /Users/marte/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.5-36.2.34/forge-1.16.5-36.2.34-injected.jar, --outJar, /Users/marte/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.5-36.2.34_mapped_official_1.16.5/forge-1.16.5-36.2.34_mapped_official_1.16.5.jar, --logFile, accesstransform.log, --atFile, /Users/marte/Documents/RandomProjeots/forge-1/build/_atJar_5/parent_at.cfg'
+Classpath:
+ - /Users/marte/.gradle/caches/forge_gradle/maven_downloader/net/minecraftforge/accesstransformers/8.0.7/accesstransformers-8.0.7-fatjar.jar
+Working directory: /Users/marte/Documents/RandomProjeots/forge-1/build/_atJar_5
+Main class: net.minecraftforge.accesstransformer.TransformerProcessor
 ====================================

@@ -1,6 +1,7 @@
 package com.martinhomods.modvski.init;
 
 import com.martinhomods.modvski.blocks.black_gold_block;
+import com.martinhomods.modvski.blocks.black_gold_ore;
 import com.martinhomods.modvski.blocks.wuantanio_block;
 import com.martinhomods.modvski.blocks.wuantanio_ore;
 import com.martinhomods.modvski.modvski;
@@ -28,10 +29,14 @@ public class BlockInit {
         //blocos
         public static final RegistryObject<Block> WUANTANIO_BLOCK = BLOCKS.register("wuantanio_block",()
                 -> new wuantanio_block(AbstractBlock.Properties.copy(Blocks.DIAMOND_BLOCK)));
-        public static final RegistryObject<Block> WUANTANIO_ORE = BLOCKS.register("wuantanio_ore",()
-                -> new wuantanio_ore(AbstractBlock.Properties.copy(Blocks.DIAMOND_ORE)));
         public static final RegistryObject<Block> BLACK_GOLD_BLOCK = BLOCKS.register("black_gold_block", ()
                 -> new black_gold_block(AbstractBlock.Properties.copy(Blocks.DIAMOND_BLOCK)));
+
+        //minerios
+        public static final RegistryObject<Block> WUANTANIO_ORE = BLOCKS.register("wuantanio_ore",()
+                -> new wuantanio_ore(AbstractBlock.Properties.copy(Blocks.DIAMOND_ORE)));
+        public static final RegistryObject<Block> BLACK_GOLD_ORE = BLOCKS.register("black_gold_ore", ()
+                -> new black_gold_ore(AbstractBlock.Properties.copy(Blocks.GOLD_BLOCK)));
         //public static final RegistryObject<Block> BLACK_GOLD_BLOCK = BLOCKS.register("black_gold_block",()
         //        -> new black_gold_block(AbstractBlock.Properties.copy(Blocks.DIAMOND_BLOCK)));
                 //AbstractBlock.Properties.

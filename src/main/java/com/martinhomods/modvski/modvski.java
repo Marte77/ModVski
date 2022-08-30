@@ -1,14 +1,15 @@
 package com.martinhomods.modvski;
 
-import com.martinhomods.modvski.init.BlockInit;
-import com.martinhomods.modvski.init.ItemInit;
-import com.martinhomods.modvski.init.SoundInit;
-import com.martinhomods.modvski.init.StructuresInit;
+import com.martinhomods.modvski.entities.lamborghini_entity;
+import com.martinhomods.modvski.init.*;
 import com.martinhomods.modvski.world.gen.OreGeneration;
 import com.martinhomods.modvski.world.structures.StructuresConfigured;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
@@ -21,15 +22,18 @@ import net.minecraft.world.gen.settings.StructureSeparationSettings;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.ParallelDispatchEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -52,22 +56,23 @@ public class modvski
 
     public modvski() {
         // Register the setup method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        modEventBus.addListener(this::setup);
 
         // Register the doClientStuff method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        modEventBus.addListener(this::doClientStuff);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGeneration::gerarOres);
-        ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        SoundInit.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ItemInit.ITEMS.register(modEventBus);
+        BlockInit.BLOCKS.register(modEventBus);
+        SoundInit.SOUNDS.register(modEventBus);
+        EntityInit.ENTITIES.register(modEventBus);
 
-
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        StructuresInit.ESTRUTURAS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        modEventBus.addListener(this::setup);
+        StructuresInit.ESTRUTURAS.register(modEventBus);
+        //modEventBus.addListener(this::setup);
         //System.out.println(ItemInit.wuantanio_sword.get().toString() + " swag");
         //BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         // For events that happen after initialization. This is probably going to be use a lot.
@@ -83,8 +88,10 @@ public class modvski
         event.enqueueWork(() -> {
             StructuresInit.setupStructures();
             StructuresConfigured.registerConfiguredStructures();
+            //EntityInit.createAttributes();
         });
     }
+
 
     /**
      * This is the event you will use to add anything to any biome.
@@ -155,7 +162,7 @@ public class modvski
              */
             Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(serverWorld.getChunkSource().generator.getSettings().structureConfig());
             tempMap.putIfAbsent(StructuresInit.CASA_DOS_YOUTUBERS.get(), DimensionStructuresSettings.DEFAULTS.get(StructuresInit.CASA_DOS_YOUTUBERS.get()));
-            serverWorld.getChunkSource().generator.getSettings().structureConfig = tempMap;
+            //serverWorld.getChunkSource().generator.getSettings().structureConfig = tempMap;
         }
     }
 

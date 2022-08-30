@@ -13,9 +13,8 @@ import java.util.function.Supplier;
 //        });
 public enum ModItemTier implements IItemTier {
     //base harvest level, durability, mining speed, damage and enchantablity (the higher this is, the better enchantments you get)
-    WUANTANIO(5,15000,50,10000,5,()->{
-        return Ingredient.of(ItemInit.WUANTANIO_INGOT.get());
-    });
+    WUANTANIO(5,15000,50,10000,5,
+            ()-> Ingredient.of(ItemInit.WUANTANIO_INGOT.get()));
 
 
 
@@ -26,7 +25,7 @@ public enum ModItemTier implements IItemTier {
     private final int enchantmentValue;
     private final LazyValue<Ingredient> repairIngredient;
 
-    private ModItemTier(int harvest_level, int durability, float mining_speed, float damage, int enchantment_value, Supplier<Ingredient> repair_Ingredient) {
+    ModItemTier(int harvest_level, int durability, float mining_speed, float damage, int enchantment_value, Supplier<Ingredient> repair_Ingredient) {
         this.level = harvest_level;
         this.uses = durability;
         this.speed = mining_speed;

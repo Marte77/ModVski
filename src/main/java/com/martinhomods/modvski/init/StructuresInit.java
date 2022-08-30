@@ -95,13 +95,13 @@ public class StructuresInit {
          *
          * NOISE_AFFECTING_FEATURES requires AccessTransformer  (See resources/META-INF/accesstransformer.cfg)
          */
-        if(transformSurroundingLand){
+        /*if(transformSurroundingLand){
             Structure.NOISE_AFFECTING_FEATURES =
                     ImmutableList.<Structure<?>>builder()
                             .addAll(Structure.NOISE_AFFECTING_FEATURES)
                             .add(structure)
                             .build();
-        }
+        }*/
 
         /*
          * This is the map that holds the default spacing of all structures.
@@ -116,12 +116,12 @@ public class StructuresInit {
          *
          * DEFAULTS requires AccessTransformer  (See resources/META-INF/accesstransformer.cfg)
          */
-        DimensionStructuresSettings.DEFAULTS =
+        /*DimensionStructuresSettings.DEFAULTS =
                 ImmutableMap.<Structure<?>, StructureSeparationSettings>builder()
                         .putAll(DimensionStructuresSettings.DEFAULTS)
                         .put(structure, structureSeparationSettings)
                         .build();
-
+*/
 
         /*
          * There are very few mods that relies on seeing your structure in the noise settings registry before the world is made.
@@ -130,16 +130,16 @@ public class StructuresInit {
          * that field only applies for the default overworld and won't add to other worldtypes or dimensions (like amplified or Nether).
          * So yeah, don't do DimensionSettings.BUILTIN_OVERWORLD. Use the NOISE_GENERATOR_SETTINGS loop below instead if you must.
          */
-        WorldGenRegistries.NOISE_GENERATOR_SETTINGS.entrySet().forEach(settings -> {
+        /*WorldGenRegistries.NOISE_GENERATOR_SETTINGS.entrySet().forEach(settings -> {
             Map<Structure<?>, StructureSeparationSettings> structureMap = settings.getValue().structureSettings().structureConfig();
-
+*/
             /*
              * Pre-caution in case a mod makes the structure map immutable like datapacks do.
              * I take no chances myself. You never know what another mods does...
              *
              * structureConfig requires AccessTransformer  (See resources/META-INF/accesstransformer.cfg)
              */
-            if(structureMap instanceof ImmutableMap){
+            /*if(structureMap instanceof ImmutableMap){
                 Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(structureMap);
                 tempMap.put(structure, structureSeparationSettings);
                 settings.getValue().structureSettings().structureConfig = tempMap;
@@ -147,7 +147,7 @@ public class StructuresInit {
             else{
                 structureMap.put(structure, structureSeparationSettings);
             }
-        });
+        });*/
     }
 
 }

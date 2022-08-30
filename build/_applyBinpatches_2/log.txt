@@ -1,15 +1,17 @@
-Args: "--clean", "C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.16.5-20210115.111550\joined-1.16.5-20210115.111550-srg.jar", "--output", "D:\Programacao\Programas\ModVski\build\fg_cache\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatched.jar", "--apply", "D:\Programacao\Programas\ModVski\build\fg_cache\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatches.lzma"
-Classpath: C:\Users\marti\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\binarypatcher\1.0.12\binarypatcher-1.0.12-fatjar.jar
-WorkDir: D:\Programacao\Programas\ModVski\build\_applyBinpatches_2
-Main: net.minecraftforge.binarypatcher.ConsoleTool
+Java Launcher: /Users/marte/Library/Java/JavaVirtualMachines/corretto-1.8.0_342/Contents/Home/bin/java
+Arguments: '--clean, /Users/marte/.gradle/caches/forge_gradle/mcp_repo/net/minecraft/joined/1.16.5-20210115.111550/joined-1.16.5-20210115.111550-srg.jar, --output, /Users/marte/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.5-36.2.34/forge-1.16.5-36.2.34-binpatched.jar, --apply, /Users/marte/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.5-36.2.34/forge-1.16.5-36.2.34-binpatches.lzma'
+Classpath:
+ - /Users/marte/.gradle/caches/forge_gradle/maven_downloader/net/minecraftforge/binarypatcher/1.0.12/binarypatcher-1.0.12-fatjar.jar
+Working directory: /Users/marte/Documents/RandomProjeots/forge-1/build/_applyBinpatches_2
+Main class: net.minecraftforge.binarypatcher.ConsoleTool
 ====================================
 Applying: 
-  Clean:     C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.16.5-20210115.111550\joined-1.16.5-20210115.111550-srg.jar
-  Output:    D:\Programacao\Programas\ModVski\build\fg_cache\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatched.jar
+  Clean:     /Users/marte/.gradle/caches/forge_gradle/mcp_repo/net/minecraft/joined/1.16.5-20210115.111550/joined-1.16.5-20210115.111550-srg.jar
+  Output:    /Users/marte/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.5-36.2.34/forge-1.16.5-36.2.34-binpatched.jar
   KeepData:  false
   Unpatched: false
-  Patches:   D:\Programacao\Programas\ModVski\build\fg_cache\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatches.lzma
-Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatches.lzma
+  Patches:   /Users/marte/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.5-36.2.34/forge-1.16.5-36.2.34-binpatches.lzma
+Loading patches file: /Users/marte/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.5-36.2.34/forge-1.16.5-36.2.34-binpatches.lzma
   Reading patch com.mojang.blaze3d.platform.GlStateManager$1.binpatch
     Checksum: 37bccb56 Exists: true
   Reading patch com.mojang.blaze3d.platform.GlStateManager$AlphaState.binpatch
@@ -152,6 +154,18 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: 69cf9842 Exists: true
   Reading patch net.minecraft.block.CarrotBlock.binpatch
     Checksum: d097311d Exists: true
+  Reading patch net.minecraft.block.ChestBlock$1.binpatch
+    Checksum: 8f94470e Exists: true
+  Reading patch net.minecraft.block.ChestBlock$2$1.binpatch
+    Checksum: 13479c04 Exists: true
+  Reading patch net.minecraft.block.ChestBlock$2.binpatch
+    Checksum: 5f23c6a2 Exists: true
+  Reading patch net.minecraft.block.ChestBlock$3.binpatch
+    Checksum: 39ba2bef Exists: true
+  Reading patch net.minecraft.block.ChestBlock$4.binpatch
+    Checksum: 75009ae5 Exists: true
+  Reading patch net.minecraft.block.ChestBlock.binpatch
+    Checksum: 3d8418f7 Exists: true
   Reading patch net.minecraft.block.ChorusFlowerBlock.binpatch
     Checksum: 9c3ac8a Exists: true
   Reading patch net.minecraft.block.CocoaBlock$1.binpatch
@@ -278,6 +292,10 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: dd96e924 Exists: true
   Reading patch net.minecraft.block.TrapDoorBlock.binpatch
     Checksum: a660d08f Exists: true
+  Reading patch net.minecraft.block.TripWireHookBlock$1.binpatch
+    Checksum: d499ff4 Exists: true
+  Reading patch net.minecraft.block.TripWireHookBlock.binpatch
+    Checksum: 5c19d974 Exists: true
   Reading patch net.minecraft.block.TurtleEggBlock.binpatch
     Checksum: 228ce0c7 Exists: true
   Reading patch net.minecraft.block.VineBlock$1.binpatch
@@ -602,6 +620,20 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: 38b68b66 Exists: true
   Reading patch net.minecraft.client.renderer.OverlayRenderer.binpatch
     Checksum: 1514a1a1 Exists: true
+  Reading patch net.minecraft.client.renderer.RenderType$1.binpatch
+    Checksum: 52f767ab Exists: true
+  Reading patch net.minecraft.client.renderer.RenderType$OutlineState.binpatch
+    Checksum: 21fd9ad6 Exists: true
+  Reading patch net.minecraft.client.renderer.RenderType$State$Builder.binpatch
+    Checksum: a4787650 Exists: true
+  Reading patch net.minecraft.client.renderer.RenderType$State.binpatch
+    Checksum: 14cd3935 Exists: true
+  Reading patch net.minecraft.client.renderer.RenderType$Type$EqualityStrategy.binpatch
+    Checksum: 8c8fb276 Exists: true
+  Reading patch net.minecraft.client.renderer.RenderType$Type.binpatch
+    Checksum: a2dab7ae Exists: true
+  Reading patch net.minecraft.client.renderer.RenderType.binpatch
+    Checksum: 88c6b366 Exists: true
   Reading patch net.minecraft.client.renderer.RenderTypeLookup.binpatch
     Checksum: f79aba12 Exists: true
   Reading patch net.minecraft.client.renderer.WorldRenderer$1.binpatch
@@ -840,6 +872,10 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: 43ae7624 Exists: true
   Reading patch net.minecraft.command.impl.LocateCommand.binpatch
     Checksum: 62c4aabb Exists: true
+  Reading patch net.minecraft.command.impl.SpreadPlayersCommand$Position.binpatch
+    Checksum: d3ac1c91 Exists: true
+  Reading patch net.minecraft.command.impl.SpreadPlayersCommand.binpatch
+    Checksum: 47626221 Exists: true
   Reading patch net.minecraft.command.impl.TeleportCommand$Facing.binpatch
     Checksum: ea8c3e87 Exists: true
   Reading patch net.minecraft.command.impl.TeleportCommand.binpatch
@@ -850,6 +886,8 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: 9e6a3228 Exists: true
   Reading patch net.minecraft.crash.CrashReportCategory.binpatch
     Checksum: 976ea252 Exists: true
+  Reading patch net.minecraft.data.AdvancementProvider.binpatch
+    Checksum: 643d40d8 Exists: true
   Reading patch net.minecraft.data.BlockTagsProvider.binpatch
     Checksum: b9a05caf Exists: true
   Reading patch net.minecraft.data.DataGenerator.binpatch
@@ -1000,6 +1038,8 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: a097f4bc Exists: true
   Reading patch net.minecraft.entity.FlyingEntity.binpatch
     Checksum: 4fa9d649 Exists: true
+  Reading patch net.minecraft.entity.ICrossbowUser.binpatch
+    Checksum: 3916ccbe Exists: true
   Reading patch net.minecraft.entity.IShearable.binpatch
     Checksum: ab7531a5 Exists: true
   Reading patch net.minecraft.entity.LivingEntity$1.binpatch
@@ -1028,6 +1068,10 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: 1ee99f87 Exists: true
   Reading patch net.minecraft.entity.ai.brain.task.FarmTask.binpatch
     Checksum: 201bfbab Exists: true
+  Reading patch net.minecraft.entity.ai.brain.task.ShootTargetTask$Status.binpatch
+    Checksum: cbfd41f4 Exists: true
+  Reading patch net.minecraft.entity.ai.brain.task.ShootTargetTask.binpatch
+    Checksum: d657bde3 Exists: true
   Reading patch net.minecraft.entity.ai.goal.BreakBlockGoal.binpatch
     Checksum: bdf34ee9 Exists: true
   Reading patch net.minecraft.entity.ai.goal.BreakDoorGoal.binpatch
@@ -1038,6 +1082,10 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: 75a117fb Exists: true
   Reading patch net.minecraft.entity.ai.goal.RangedBowAttackGoal.binpatch
     Checksum: 4f46f4b1 Exists: true
+  Reading patch net.minecraft.entity.ai.goal.RangedCrossbowAttackGoal$CrossbowState.binpatch
+    Checksum: d0a25dff Exists: true
+  Reading patch net.minecraft.entity.ai.goal.RangedCrossbowAttackGoal.binpatch
+    Checksum: 7321f5e2 Exists: true
   Reading patch net.minecraft.entity.ai.goal.RunAroundLikeCrazyGoal.binpatch
     Checksum: 547fecc8 Exists: true
   Reading patch net.minecraft.entity.ai.goal.TriggerSkeletonTrapGoal.binpatch
@@ -1146,6 +1194,8 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: 6890d520 Exists: true
   Reading patch net.minecraft.entity.monster.MagmaCubeEntity.binpatch
     Checksum: 1aac299 Exists: true
+  Reading patch net.minecraft.entity.monster.PillagerEntity.binpatch
+    Checksum: 75c17f4f Exists: true
   Reading patch net.minecraft.entity.monster.RavagerEntity$1.binpatch
     Checksum: 3f2a3b0d Exists: true
   Reading patch net.minecraft.entity.monster.RavagerEntity$AttackGoal.binpatch
@@ -1424,6 +1474,8 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: 6e9782a0 Exists: true
   Reading patch net.minecraft.fluid.WaterFluid.binpatch
     Checksum: 65f61d8c Exists: true
+  Reading patch net.minecraft.inventory.container.AbstractFurnaceContainer.binpatch
+    Checksum: e35bf4a0 Exists: true
   Reading patch net.minecraft.inventory.container.BeaconContainer$1.binpatch
     Checksum: 3f823450 Exists: true
   Reading patch net.minecraft.inventory.container.BeaconContainer$BeaconSlot.binpatch
@@ -1496,6 +1548,8 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: 54cbf717 Exists: true
   Reading patch net.minecraft.item.BucketItem.binpatch
     Checksum: fd17e11f Exists: true
+  Reading patch net.minecraft.item.ChorusFruitItem.binpatch
+    Checksum: 4b889cdc Exists: true
   Reading patch net.minecraft.item.DyeColor.binpatch
     Checksum: a352f8ad Exists: true
   Reading patch net.minecraft.item.DyeableHorseArmorItem.binpatch
@@ -1572,6 +1626,8 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: dada9c3c Exists: true
   Reading patch net.minecraft.item.ShovelItem.binpatch
     Checksum: ead8f5d Exists: true
+  Reading patch net.minecraft.item.SpawnEggItem.binpatch
+    Checksum: 2f3c5072 Exists: true
   Reading patch net.minecraft.item.ToolItem.binpatch
     Checksum: a6045e33 Exists: true
   Reading patch net.minecraft.item.WallOrFloorItem.binpatch
@@ -1720,6 +1776,8 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: 19a85363 Exists: true
   Reading patch net.minecraft.nbt.StringNBT.binpatch
     Checksum: f9f4660e Exists: true
+  Reading patch net.minecraft.network.NettyCompressionEncoder.binpatch
+    Checksum: f46ee539 Exists: true
   Reading patch net.minecraft.network.NettyPacketEncoder.binpatch
     Checksum: 7a1687da Exists: true
   Reading patch net.minecraft.network.NetworkManager$1.binpatch
@@ -2504,11 +2562,12 @@ Loading patches file: D:\Programacao\Programas\ModVski\build\fg_cache\net\minecr
     Checksum: 531d664c Exists: true
   Reading patch net.minecraft.world.storage.WorldSavedData.binpatch
     Checksum: f3fb0286 Exists: true
-Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.16.5-20210115.111550\joined-1.16.5-20210115.111550-srg.jar
+Processing: /Users/marte/.gradle/caches/forge_gradle/mcp_repo/net/minecraft/joined/1.16.5-20210115.111550/joined-1.16.5-20210115.111550-srg.jar
   Patching net/minecraft/block/VineBlock$1 1/1
   Patching net/minecraft/block/WebBlock 1/1
   Patching net/minecraft/block/VineBlock 1/1
   Patching net/minecraft/block/TurtleEggBlock 1/1
+  Patching net/minecraft/block/TripWireHookBlock 1/1
   Patching net/minecraft/block/TrapDoorBlock 1/1
   Patching net/minecraft/block/TNTBlock 1/1
   Patching net/minecraft/block/TallSeaGrassBlock 1/1
@@ -2559,6 +2618,7 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/block/ComparatorBlock 1/1
   Patching net/minecraft/block/CocoaBlock 1/1
   Patching net/minecraft/block/ChorusFlowerBlock 1/1
+  Patching net/minecraft/block/ChestBlock 1/1
   Patching net/minecraft/block/CarrotBlock 1/1
   Patching net/minecraft/block/CampfireBlock 1/1
   Patching net/minecraft/block/CactusBlock 1/1
@@ -2637,6 +2697,7 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/server/dedicated/DedicatedServer$1 1/1
   Patching net/minecraft/dispenser/IDispenseItemBehavior$8$1 1/1
   Patching net/minecraft/item/WallOrFloorItem 1/1
+  Patching net/minecraft/item/SpawnEggItem 1/1
   Patching net/minecraft/item/ShovelItem 1/1
   Patching net/minecraft/item/ShearsItem 1/1
   Patching net/minecraft/advancements/AdvancementRewards$Builder 1/1
@@ -2657,6 +2718,7 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/item/DyeColor 1/1
   Patching net/minecraft/item/ToolItem 1/1
   Patching net/minecraft/item/ItemGroup 1/1
+  Patching net/minecraft/item/ChorusFruitItem 1/1
   Patching net/minecraft/item/BucketItem 1/1
   Patching net/minecraft/item/BowItem 1/1
   Patching net/minecraft/item/BoneMealItem 1/1
@@ -2681,6 +2743,7 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/inventory/container/BrewingStandContainer 1/1
   Patching net/minecraft/inventory/container/BeaconContainer 1/1
   Patching net/minecraft/inventory/container/RepairContainer 1/1
+  Patching net/minecraft/inventory/container/AbstractFurnaceContainer 1/1
   Patching net/minecraft/inventory/container/Container 1/1
   Patching net/minecraft/world/server/ServerChunkProvider$1 1/1
   Patching net/minecraft/item/Food 1/1
@@ -2728,10 +2791,12 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/entity/monster/SilverfishEntity 1/1
   Patching net/minecraft/entity/monster/ShulkerEntity 1/1
   Patching net/minecraft/entity/monster/RavagerEntity 1/1
+  Patching net/minecraft/entity/monster/PillagerEntity 1/1
   Patching net/minecraft/entity/monster/MagmaCubeEntity 1/1
   Patching net/minecraft/entity/monster/IllusionerEntity 1/1
   Patching net/minecraft/entity/monster/EvokerEntity 1/1
   Patching net/minecraft/entity/monster/EndermanEntity 1/1
+  Patching net/minecraft/entity/ICrossbowUser 1/1
   Patching net/minecraft/inventory/container/ContainerType$IFactory 1/1
   Patching net/minecraft/entity/monster/CreeperEntity 1/1
   Patching net/minecraft/entity/monster/AbstractSkeletonEntity 1/1
@@ -2790,6 +2855,7 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/world/spawner/WorldEntitySpawner$1 1/1
   Patching net/minecraft/entity/ai/goal/RunAroundLikeCrazyGoal 1/1
   Patching net/minecraft/entity/ai/goal/BreakBlockGoal 1/1
+  Patching net/minecraft/entity/ai/goal/RangedCrossbowAttackGoal 1/1
   Patching net/minecraft/entity/ai/goal/RangedBowAttackGoal 1/1
   Patching net/minecraft/entity/ai/goal/MeleeAttackGoal 1/1
   Patching net/minecraft/world/server/ChunkManager$EntityTracker 1/1
@@ -2808,6 +2874,7 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/entity/passive/PolarBearEntity$HurtByTargetGoal 1/1
   Patching net/minecraft/entity/passive/PolarBearEntity$AttackPlayerGoal 1/1
   Patching net/minecraft/entity/ai/brain/task/FarmTask 1/1
+  Patching net/minecraft/entity/ai/brain/task/ShootTargetTask 1/1
   Patching net/minecraft/entity/ai/attributes/GlobalEntityTypeAttributes 1/1
   Patching net/minecraft/entity/ai/attributes/AttributeModifierMap 1/1
   Patching net/minecraft/entity/ai/attributes/Attribute 1/1
@@ -2945,7 +3012,9 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/entity/monster/EvokerEntity$SummonSpellGoal 1/1
   Patching net/minecraft/entity/monster/EvokerEntity$CastingSpellGoal 1/1
   Patching net/minecraft/entity/monster/EvokerEntity$AttackSpellGoal 1/1
+  Patching net/minecraft/entity/ai/goal/RangedCrossbowAttackGoal$CrossbowState 1/1
   Patching net/minecraft/client/MainWindow$1 1/1
+  Patching net/minecraft/command/impl/SpreadPlayersCommand$Position 1/1
   Patching net/minecraft/entity/monster/EvokerEntity$1 1/1
   Patching net/minecraft/util/math/shapes/EntitySelectionContext$1 1/1
   Patching net/minecraft/client/ClientBrandRetriever 1/1
@@ -3019,6 +3088,7 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/client/renderer/chunk/ChunkRenderDispatcher$CompiledChunk 1/1
   Patching net/minecraft/client/renderer/chunk/ChunkRenderDispatcher$ChunkTaskResult 1/1
   Patching net/minecraft/item/crafting/CookingRecipeSerializer$IFactory 1/1
+  Patching net/minecraft/block/TripWireHookBlock$1 1/1
   Patching net/minecraft/client/gui/ScreenManager$IScreenFactory 1/1
   Patching net/minecraft/block/NetherPortalBlock$1 1/1
   Patching net/minecraft/client/renderer/texture/TextureAtlasSprite$InterpolationData 1/1
@@ -3026,6 +3096,7 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/world/gen/feature/jigsaw/JigsawPattern$PlacementBehaviour 1/1
   Patching net/minecraft/client/renderer/texture/TextureAtlasSprite$1 1/1
   Patching net/minecraft/client/renderer/model/MultipartBakedModel$Builder 1/1
+  Patching net/minecraft/client/renderer/RenderType$State$Builder 1/1
   Patching net/minecraft/tileentity/BrewingStandTileEntity$1 1/1
   Patching net/minecraft/network/play/server/SEntityPropertiesPacket$Snapshot 1/1
   Patching net/minecraft/entity/item/ArmorStandEntity$1 1/1
@@ -3107,6 +3178,8 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/entity/monster/AbstractSkeletonEntity$1 1/1
   Patching net/minecraft/client/renderer/WorldRenderer$ShaderException 1/1
   Patching net/minecraft/client/renderer/WorldRenderer$LocalRenderInformationContainer 1/1
+  Patching net/minecraft/block/ChestBlock$2$1 1/1
+  Patching net/minecraft/client/renderer/RenderType$Type$EqualityStrategy 1/1
   Patching net/minecraft/client/renderer/WorldRenderer$1 1/1
   Patching net/minecraft/item/MinecartItem$1 1/1
   Patching net/minecraft/tileentity/TileEntityType$Builder 1/1
@@ -3219,10 +3292,14 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/block/Block$2 1/1
   Patching net/minecraft/block/Block$1 1/1
   Patching net/minecraft/client/world/DimensionRenderInfo$FogType 1/1
+  Patching net/minecraft/client/renderer/RenderType$OutlineState 1/1
   Patching net/minecraft/client/world/DimensionRenderInfo$Overworld 1/1
+  Patching net/minecraft/client/renderer/RenderType$State 1/1
   Patching net/minecraft/client/world/DimensionRenderInfo$Nether 1/1
+  Patching net/minecraft/client/renderer/RenderType$Type 1/1
   Patching net/minecraft/client/world/DimensionRenderInfo$End 1/1
   Patching net/minecraft/nbt/StringNBT$1 1/1
+  Patching net/minecraft/client/renderer/RenderType$1 1/1
   Patching net/minecraft/world/server/TicketManager$PlayerTicketTracker 1/1
   Patching net/minecraft/world/server/TicketManager$PlayerChunkTracker 1/1
   Patching net/minecraft/world/server/TicketManager$ChunkTicketTracker 1/1
@@ -3277,6 +3354,7 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/server/dedicated/ServerHangWatchdog 1/1
   Patching net/minecraft/server/dedicated/DedicatedServer 1/1
   Patching net/minecraft/command/impl/TeleportCommand 1/1
+  Patching net/minecraft/command/impl/SpreadPlayersCommand 1/1
   Patching net/minecraft/command/impl/TeleportCommand$Facing 1/1
   Patching net/minecraft/command/impl/LocateCommand 1/1
   Patching net/minecraft/world/biome/Biome$TemperatureModifier$2 1/1
@@ -3317,6 +3395,7 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/network/NettyPacketEncoder 1/1
   Patching net/minecraft/network/PacketBuffer 1/1
   Patching net/minecraft/network/NetworkManager 1/1
+  Patching net/minecraft/network/NettyCompressionEncoder 1/1
   Patching net/minecraft/util/registry/WorldSettingsImport$IResourceAccess$1 1/1
   Patching net/minecraft/nbt/StringNBT 1/1
   Patching net/minecraft/nbt/CompressedStreamTools 1/1
@@ -3335,7 +3414,9 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/data/LootTableProvider 1/1
   Patching net/minecraft/data/loot/EntityLootTables 1/1
   Patching net/minecraft/data/loot/BlockLootTables 1/1
+  Patching net/minecraft/data/AdvancementProvider 1/1
   Patching net/minecraft/data/DirectoryCache 1/1
+  Patching net/minecraft/entity/ai/brain/task/ShootTargetTask$Status 1/1
   Patching net/minecraft/data/DataGenerator 1/1
   Patching net/minecraft/util/registry/WorldGenRegistries 1/1
   Patching net/minecraft/particles/ParticleTypes 1/1
@@ -3470,6 +3551,7 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/client/renderer/BlockModelShapes 1/1
   Patching net/minecraft/client/renderer/Atlases 1/1
   Patching net/minecraft/client/renderer/OverlayRenderer 1/1
+  Patching net/minecraft/client/renderer/RenderType 1/1
   Patching net/minecraft/client/shader/ShaderGroup 1/1
   Patching net/minecraft/client/renderer/LightTexture 1/1
   Patching net/minecraft/client/renderer/WorldRenderer 1/1
@@ -3701,7 +3783,11 @@ Processing: C:\Users\marti\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/enchantment/EnchantmentType$5 1/1
   Patching net/minecraft/client/network/play/ClientPlayNetHandler$1 1/1
   Patching net/minecraft/loot/LootTable$1 1/1
+  Patching net/minecraft/block/ChestBlock$4 1/1
   Patching net/minecraft/world/gen/feature/AbstractBigMushroomFeature 1/1
+  Patching net/minecraft/block/ChestBlock$3 1/1
+  Patching net/minecraft/block/ChestBlock$2 1/1
+  Patching net/minecraft/block/ChestBlock$1 1/1
   Patching net/minecraft/world/gen/carver/WorldCarver 1/1
   Patching net/minecraft/world/gen/settings/DimensionGeneratorSettings 1/1
   Patching net/minecraft/world/spawner/PhantomSpawner 1/1

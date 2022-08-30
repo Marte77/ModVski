@@ -18,6 +18,7 @@ public class SoundInit {
     public static final RegistryObject<SoundEvent> WUANTANIO_ORE_BREAK = SOUNDS.register("wuantanio_ore_break"
             , ()-> new SoundEvent(new ResourceLocation(modvski.MODID,"wuantanio_ore_break")));
 
+    //todo som do sirkazzio para o ouro negro
 
 
 

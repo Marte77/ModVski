@@ -1,5 +1,6 @@
 package com.martinhomods.modvski.world.gen;
 
+import com.martinhomods.modvski.blocks.black_gold_ore;
 import com.martinhomods.modvski.blocks.wuantanio_ore;
 import com.martinhomods.modvski.init.BlockInit;
 import net.minecraft.block.BlockState;
@@ -20,6 +21,8 @@ public class OreGeneration {
         if(!(biomeLoadingEvent.getCategory().equals(Biome.Category.NETHER)) ||!(biomeLoadingEvent.getCategory().equals(Biome.Category.THEEND)) ) {
             generateOres(biomeLoadingEvent.getGeneration(),OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                     BlockInit.WUANTANIO_ORE.get().defaultBlockState(), wuantanio_ore.veinSize,wuantanio_ore.minHeigth,wuantanio_ore.maxHeigth,wuantanio_ore.amount);
+            generateOres(biomeLoadingEvent.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                    BlockInit.BLACK_GOLD_ORE.get().defaultBlockState(), black_gold_ore.veinSize, black_gold_ore.minHeigth, black_gold_ore.maxHeigth, black_gold_ore.amount);
         }
     }
 

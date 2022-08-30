@@ -41,6 +41,6 @@ public class StructuresConfigured {
          *
          * Requires AccessTransformer ( see resources/META-INF/accesstransformer.cfg )
          */
-        FlatGenerationSettings.STRUCTURE_FEATURES.put(StructuresInit.CASA_DOS_YOUTUBERS.get(), CONFIGURED_CASA_DOS_YOUTUBERS);
+        //FlatGenerationSettings.STRUCTURE_FEATURES.put(StructuresInit.CASA_DOS_YOUTUBERS.get(), CONFIGURED_CASA_DOS_YOUTUBERS);
     }
 }

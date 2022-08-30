@@ -3,10 +3,7 @@ package com.martinhomods.modvski.world.structures;
 import com.google.common.collect.ImmutableMap;
 import com.martinhomods.modvski.init.StructuresInit;
 import com.martinhomods.modvski.modvski;
-import net.minecraft.block.Blocks;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.tileentity.ChestTileEntity;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Rotation;
@@ -69,7 +66,7 @@ public class casa_dos_youtubersPieces {
         // Lots of trial and error may be needed to get this right for your structure.
         BlockPos rotationOffSet = new BlockPos(0, 0, 0).rotate(rotation);
         BlockPos blockpos = rotationOffSet.offset(x, pos.getY(), z);
-        pieceList.add(new casa_dos_youtubersPieces.Piece(templateManager, casa_youtubers, blockpos, rotation));
+        pieceList.add(new Piece(templateManager, casa_youtubers, blockpos, rotation));
 
 
     }
