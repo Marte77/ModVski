@@ -39,7 +39,7 @@ public class ItemInit {
         public static final RegistryObject<Item> WUANTANIO_CART = ITEMS.register("wuantanio_cart", () -> new wuantanio_cart(new Item.Properties().tab(menuGrupoItemsCreativo.instance).stacksTo(64)));
 
         //vehicles
-        public static final RegistryObject<Item> LAMBORGHINI = ITEMS.register("lamborghini_item",() -> new lamborghini_item(new Item.Properties().tab(menuGrupoItemsCreativo.instance).stacksTo(1)));
+        public static final RegistryObject<Item> LAMBORGHINI = ITEMS.register("lamborghini_item",() -> new lamborghini_item(new Item.Properties().tab(menuGrupoItemsCreativo.instance).stacksTo(1), EntityInit.LAMBORGHINI_ENTITY));
 
         //menu no modo criativo
         public static class menuGrupoItemsCreativo extends ItemGroup {

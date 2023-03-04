@@ -3,6 +3,9 @@ package com.martinhomods.modvski.items.vehicles.lamborghini;
 import com.martinhomods.modvski.console;
 import com.martinhomods.modvski.entities.lamborghini_entity;
 import com.martinhomods.modvski.init.EntityInit;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.CampfireBlock;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.client.Minecraft;
 import net.minecraft.dispenser.IBlockSource;
@@ -10,25 +13,38 @@ import net.minecraft.dispenser.IDispenseItemBehavior;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUseContext;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.tileentity.MobSpawnerTileEntity;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.*;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceContext;
-import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.util.math.*;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector3i;
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.ChunkStatus;
+import net.minecraft.world.chunk.IChunk;
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.spawner.AbstractSpawner;
 import org.antlr.v4.runtime.misc.NotNull;
 
+import javax.annotation.Nullable;
+import javax.swing.*;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class lamborghini_item extends Item implements IDispenseItemBehavior {
-    public lamborghini_item(Properties p_i48487_1_) {
+    Supplier<? extends EntityType<lamborghini_entity>> defaultType;
+    public lamborghini_item(Properties p_i48487_1_, Supplier<? extends EntityType<lamborghini_entity>> entityType ) {
         super(p_i48487_1_);
+        this.defaultType = entityType;
         DispenserBlock.registerBehavior(this, this);
     }
     Predicate<Entity> ENTITY_PREDICATE = EntityPredicates.NO_SPECTATORS.and(Entity::isPickable);
@@ -48,59 +64,62 @@ public class lamborghini_item extends Item implements IDispenseItemBehavior {
         return entity.hurt(DamageSource.GENERIC,5);
     }
 
-    @Override
-    public ActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
-        ItemStack itemStack = player.getItemInHand(hand);
-        RayTraceResult raytraceresult = getPlayerPOVHitResult(world, player, RayTraceContext.FluidMode.ANY);
-        if (raytraceresult.getType() == RayTraceResult.Type.MISS) {
-            return ActionResult.pass(itemStack);
-        } else{
-            Vector3d vector3d = player.getViewVector(1.0F);
-
-            List<Entity> list = world.getEntities(player, player.getBoundingBox().expandTowards(vector3d.scale(5.0D)).inflate(1.0D), ENTITY_PREDICATE);
-            if (!list.isEmpty()) {
-                Vector3d vector3d1 = player.getEyePosition(1.0F);
-
-                for(Entity entity : list) {
-                    AxisAlignedBB axisalignedbb = entity.getBoundingBox().inflate((double)entity.getPickRadius());
-                    if (axisalignedbb.contains(vector3d1)) {
-                        return ActionResult.pass(itemStack);
-                    }
-                }
+    public EntityType<?> getType(@Nullable CompoundNBT p_208076_1_) {
+        if (p_208076_1_ != null && p_208076_1_.contains("EntityTag", 10)) {
+            CompoundNBT compoundnbt = p_208076_1_.getCompound("EntityTag");
+            if (compoundnbt.contains("id", 8)) {
+                return EntityType.byString(compoundnbt.getString("id")).orElse(EntityInit.LAMBORGHINI_ENTITY.get());
             }
-
-            if(raytraceresult.getType() == RayTraceResult.Type.BLOCK){
-                lamborghini_entity lamborghini = new lamborghini_entity(world,raytraceresult.getLocation().x,raytraceresult.getLocation().y,raytraceresult.getLocation().z);//EntityInit.LAMBORGHINI_ENTITY.get().create(world);//
-                lamborghini.setYBodyRot(player.yRot);
-                /*lamborghini.setPos(x,y,z);
-                if(!world.isClientSide){
-                    world.addFreshEntity(lamborghini);
-                    if(!player.abilities.instabuild){
-                        itemStack.shrink(1);
-                    }
-                }
-                return ActionResult.sidedSuccess(itemStack,world.isClientSide());
-                */
-
-                if(!world.noCollision(lamborghini,lamborghini.getBoundingBox())){
-                    return ActionResult.fail(itemStack);
-                } else{
-
-                    if(!world.isClientSide){
-                        world.addFreshEntity(lamborghini);
-                        if(!player.abilities.instabuild){
-                            itemStack.shrink(1);
-                        }
-                    }
-                    return ActionResult.sidedSuccess(itemStack,world.isClientSide());
-
-                }
-            }else {
-                return ActionResult.pass(itemStack);
-            }
-
         }
 
+        return EntityInit.LAMBORGHINI_ENTITY.get();
+    }
+
+
+    @Override
+    public ActionResult<ItemStack> use(World worldIn, PlayerEntity playerIn, Hand handIn) {
+        ItemStack itemstack = playerIn.getItemInHand(handIn);
+        RayTraceResult raytraceresult = getPlayerPOVHitResult(worldIn, playerIn, RayTraceContext.FluidMode.ANY);
+        if (raytraceresult.getType() == RayTraceResult.Type.MISS) {
+            return ActionResult.pass(itemstack);
+        } else {
+            Vector3d vec3d = playerIn.getViewVector(1.0F);
+            List<Entity> list = worldIn.getEntities(playerIn, playerIn.getBoundingBox().expandTowards(vec3d.scale(5.0D)).inflate(1.0D), ENTITY_PREDICATE);
+            if (!list.isEmpty()) {
+                Vector3d vec3d1 = playerIn.getEyePosition(1.0F);
+
+                for (Entity entity : list) {
+                    AxisAlignedBB axisalignedbb = entity.getBoundingBox().inflate(entity.getPickRadius());
+                    if (axisalignedbb.contains(vec3d1)) {
+                        return ActionResult.pass(itemstack);
+                    }
+                }
+            }
+
+            if (raytraceresult.getType() == RayTraceResult.Type.BLOCK) {
+                lamborghini_entity planeEntity = defaultType.get().create(worldIn);
+
+                planeEntity.setPos(raytraceresult.getLocation().x(), raytraceresult.getLocation().y(), raytraceresult.getLocation().z());
+                planeEntity.yRot = playerIn.yRot;
+                planeEntity.yRotO = playerIn.yRotO;
+                planeEntity.setCustomName(itemstack.getHoverName());
+
+                if (!worldIn.noCollision(planeEntity, planeEntity.getBoundingBox().inflate(-0.1D))) {
+                    return ActionResult.fail(itemstack);
+                } else {
+                    if (!worldIn.isClientSide) {
+                        worldIn.addFreshEntity(planeEntity);
+                        if (!playerIn.abilities.instabuild) {
+                            itemstack.shrink(1);
+                        }
+                    }
+
+                    return ActionResult.success(itemstack);
+                }
+            } else {
+                return ActionResult.pass(itemstack);
+            }
+        }
     }
 
     @Override

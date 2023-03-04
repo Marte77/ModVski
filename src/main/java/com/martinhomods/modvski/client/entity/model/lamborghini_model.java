@@ -24,61 +24,61 @@ public class lamborghini_model extends EntityModel<Entity> {
 		texHeight = 64;
 
 		rodas = new ModelRenderer(this);
-		rodas.setPos(0.0F, 5.0F, 1.0F);
-		rodas.texOffs(0, 59).addBox(-9.5F, -3.25F, 4.0F, 4.0F, 4.0F, 1.0F, 0.0F, false);
-		rodas.texOffs(0, 59).addBox(-9.5F, -3.25F, -6.0F, 4.0F, 4.0F, 1.0F, 0.0F, false);
-		rodas.texOffs(0, 59).addBox(4.5F, -3.25F, -6.0F, 4.0F, 4.0F, 1.0F, 0.0F, false);
-		rodas.texOffs(0, 59).addBox(4.5F, -3.25F, 4.0F, 4.0F, 4.0F, 1.0F, 0.0F, false);
+		rodas.setPos(0.0F, -17.0F, 1.0F);
+		rodas.texOffs(0, 59).addBox(-9.5F, 37.25F, 4.0F, 4.0F, 4.0F, 1.0F, 0.0F, false);
+		rodas.texOffs(0, 59).addBox(-9.5F, 37.25F, -6.0F, 4.0F, 4.0F, 1.0F, 0.0F, false);
+		rodas.texOffs(0, 59).addBox(4.5F, 37.25F, -6.0F, 4.0F, 4.0F, 1.0F, 0.0F, false);
+		rodas.texOffs(0, 59).addBox(4.5F, 37.25F, 4.0F, 4.0F, 4.0F, 1.0F, 0.0F, false);
 
 		corpo = new ModelRenderer(this);
-		corpo.setPos(0.0F, 3.0F, 0.0F);
+		corpo.setPos(0.0F, 65.0F, 0.0F);
 		setRotationAngle(corpo, 3.1416F, 0.0F, 0.0F);
-		corpo.texOffs(4, 0).addBox(-11.0F, -5.0F, -5.0F, 21.0F, 4.0F, 9.0F, 0.0F, false);
-		corpo.texOffs(16, 11).addBox(-8.75F, -9.0F, -5.0F, 12.0F, 1.0F, 9.0F, 0.0F, false);
-		corpo.texOffs(0, 0).addBox(-6.0F, -8.0F, 2.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
-		corpo.texOffs(0, 0).addBox(-6.0F, -8.0F, -4.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
-		corpo.texOffs(48, 41).addBox(-5.0F, -8.0F, 3.0F, 6.0F, 5.0F, 0.0F, 0.0F, false);
-		corpo.texOffs(52, 51).addBox(-5.0F, -8.0F, -4.0F, 6.0F, 5.0F, 0.0F, 0.0F, false);
+		corpo.texOffs(4, 0).addBox(-11.0F, 43.0F, -5.0F, 21.0F, 4.0F, 9.0F, 0.0F, false);
+		corpo.texOffs(16, 11).addBox(-8.75F, 50.0F, -5.0F, 12.0F, 1.0F, 9.0F, 0.0F, false);
+		corpo.texOffs(0, 0).addBox(-6.0F, 45.0F, 2.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
+		corpo.texOffs(0, 0).addBox(-6.0F, 45.0F, -4.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
+		corpo.texOffs(48, 41).addBox(-5.0F, 45.0F, 3.0F, 6.0F, 5.0F, 0.0F, 0.0F, false);
+		corpo.texOffs(52, 51).addBox(-5.0F, 45.0F, -4.0F, 6.0F, 5.0F, 0.0F, 0.0F, false);
 
 		vidroinclinado2_r1 = new ModelRenderer(this);
-		vidroinclinado2_r1.setPos(0.0F, 0.0F, 0.0F);
+		vidroinclinado2_r1.setPos(0.0F, 42.0F, 0.0F);
 		corpo.addChild(vidroinclinado2_r1);
-		setRotationAngle(vidroinclinado2_r1, 0.0F, 0.0F, -0.829F);
-		vidroinclinado2_r1.texOffs(58, 58).addBox(4.0F, -5.0F, -4.0F, 3.0F, 6.0F, 0.0F, 0.0F, false);
-		vidroinclinado2_r1.texOffs(58, 54).addBox(4.0F, -5.0F, 3.0F, 3.0F, 6.0F, 0.0F, 0.0F, false);
+		setRotationAngle(vidroinclinado2_r1, 0.0F, 0.0F, 0.829F);
+		vidroinclinado2_r1.texOffs(58, 58).addBox(4.0F, -1.0F, -4.0F, 3.0F, 6.0F, 0.0F, 0.0F, false);
+		vidroinclinado2_r1.texOffs(58, 54).addBox(4.0F, -1.0F, 3.0F, 3.0F, 6.0F, 0.0F, 0.0F, false);
 
 		vidro5_r1 = new ModelRenderer(this);
-		vidro5_r1.setPos(0.0F, 0.0F, 0.0F);
+		vidro5_r1.setPos(0.0F, 42.0F, 0.0F);
 		corpo.addChild(vidro5_r1);
-		setRotationAngle(vidro5_r1, 0.0F, 0.0F, -0.7854F);
-		vidro5_r1.texOffs(51, 39).addBox(8.0F, -4.0F, -3.0F, 0.0F, 5.0F, 5.0F, 0.0F, false);
+		setRotationAngle(vidro5_r1, 0.0F, 0.0F, 0.7854F);
+		vidro5_r1.texOffs(51, 39).addBox(8.0F, -1.0F, -3.0F, 0.0F, 5.0F, 5.0F, 0.0F, false);
 
 		vidro4_r1 = new ModelRenderer(this);
-		vidro4_r1.setPos(0.0F, 0.0F, 0.0F);
+		vidro4_r1.setPos(0.0F, 42.0F, 0.0F);
 		corpo.addChild(vidro4_r1);
-		setRotationAngle(vidro4_r1, 0.0F, 0.0F, 0.3491F);
-		vidro4_r1.texOffs(54, 50).addBox(-10.0F, -5.0F, -3.0F, 0.0F, 5.0F, 5.0F, 0.0F, false);
+		setRotationAngle(vidro4_r1, 0.0F, 0.0F, -0.3491F);
+		vidro4_r1.texOffs(54, 50).addBox(-10.0F, 0.0F, -3.0F, 0.0F, 5.0F, 5.0F, 0.0F, false);
 
 		vidro3_r1 = new ModelRenderer(this);
-		vidro3_r1.setPos(0.0F, 0.0F, 0.0F);
+		vidro3_r1.setPos(0.0F, 42.0F, 0.0F);
 		corpo.addChild(vidro3_r1);
-		setRotationAngle(vidro3_r1, 0.0F, 0.0F, 0.1187F);
-		vidro3_r1.texOffs(51, 46).addBox(-9.0F, -8.0F, -4.0F, 3.0F, 7.0F, 0.0F, 0.0F, false);
-		vidro3_r1.texOffs(52, 54).addBox(-9.0F, -8.0F, 3.0F, 3.0F, 7.0F, 0.0F, 0.0F, false);
+		setRotationAngle(vidro3_r1, 0.0F, 0.0F, -0.1187F);
+		vidro3_r1.texOffs(51, 46).addBox(-9.0F, 1.0F, -4.0F, 3.0F, 7.0F, 0.0F, 0.0F, false);
+		vidro3_r1.texOffs(52, 54).addBox(-9.0F, 1.0F, 3.0F, 3.0F, 7.0F, 0.0F, 0.0F, false);
 
 		barratras2_r1 = new ModelRenderer(this);
-		barratras2_r1.setPos(0.0F, -2.0F, 16.0F);
+		barratras2_r1.setPos(0.0F, 44.0F, 16.0F);
 		corpo.addChild(barratras2_r1);
-		setRotationAngle(barratras2_r1, 0.0F, 0.0F, -1.1781F);
-		barratras2_r1.texOffs(0, 0).addBox(-2.0F, -10.0F, -20.0F, 5.0F, 1.0F, 1.0F, 0.0F, false);
-		barratras2_r1.texOffs(0, 0).addBox(-2.0F, -10.0F, -14.0F, 5.0F, 1.0F, 1.0F, 0.0F, false);
+		setRotationAngle(barratras2_r1, 0.0F, 0.0F, 1.1781F);
+		barratras2_r1.texOffs(0, 0).addBox(-2.0F, 9.0F, -20.0F, 5.0F, 1.0F, 1.0F, 0.0F, false);
+		barratras2_r1.texOffs(0, 0).addBox(-2.0F, 9.0F, -14.0F, 5.0F, 1.0F, 1.0F, 0.0F, false);
 
 		barrafrente2_r1 = new ModelRenderer(this);
-		barrafrente2_r1.setPos(0.0F, 0.0F, 0.0F);
+		barrafrente2_r1.setPos(0.0F, 42.0F, 0.0F);
 		corpo.addChild(barrafrente2_r1);
-		setRotationAngle(barrafrente2_r1, 0.0F, 0.0F, 0.6981F);
-		barrafrente2_r1.texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 9.0F, 1.0F, 1.0F, 0.0F, false);
-		barrafrente2_r1.texOffs(0, 0).addBox(-4.0F, -8.0F, 2.0F, 9.0F, 1.0F, 1.0F, 0.0F, false);
+		setRotationAngle(barrafrente2_r1, 0.0F, 0.0F, -0.6981F);
+		barrafrente2_r1.texOffs(0, 0).addBox(-4.0F, 7.0F, -4.0F, 9.0F, 1.0F, 1.0F, 0.0F, false);
+		barrafrente2_r1.texOffs(0, 0).addBox(-4.0F, 7.0F, 2.0F, 9.0F, 1.0F, 1.0F, 0.0F, false);
 	}
 
 	@Override

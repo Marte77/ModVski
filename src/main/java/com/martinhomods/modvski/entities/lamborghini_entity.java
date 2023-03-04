@@ -14,9 +14,10 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
+import net.minecraftforge.common.extensions.IForgeEntityMinecart;
 import net.minecraftforge.fml.network.NetworkHooks;
 
-public class lamborghini_entity extends Entity  {
+public class lamborghini_entity extends Entity {
 
     private static final DataParameter<Integer> DATA_ID_HURT = EntityDataManager.defineId(lamborghini_entity.class, DataSerializers.INT);
     private static final DataParameter<Integer> DATA_ID_HURTDIR = EntityDataManager.defineId(lamborghini_entity.class, DataSerializers.INT);
@@ -42,7 +43,7 @@ public class lamborghini_entity extends Entity  {
     }
 
     public AxisAlignedBB getSpawnBoxLimit(){
-        return this.getBoundingBox().inflate(SPAWN_BOUND_X,SPAWN_BOUND_Y,SPAWN_BOUND_Z);
+        return getBoundingBox().inflate(SPAWN_BOUND_X,getBoundingBox().getYsize()-getBoundingBox().getYsize(),SPAWN_BOUND_Z);
     }
 
     @Override
